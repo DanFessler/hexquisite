@@ -1,0 +1,90 @@
+/* Styles for Hexquisite Corpse Collab
+------------------------------------------------------- */
+#HexquisiteCanvas {
+  width: 992px;
+  height: 1056px;
+  position: relative;
+  font-family: verdana;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 11pt;
+  overflow: hidden;
+  padding-bottom: 32px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  line-height: 1.2em;
+  /* z-index: 100; */
+}
+
+#HexquisiteCanvas::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-image: url("./images/canvas.png");
+  background-repeat: no-repeat;
+}
+
+.HexquisiteTile {
+  width: 112px;
+  height: 96px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: visible;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.33);
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.HexquisiteTile .timer {
+  font-size: 9pt;
+}
+
+.HexquisiteTile .status {
+  text-align: center;
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.HexquisiteTile.available {
+  background-image: url("./images/available.png");
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.HexquisiteTile.claimed {
+  background-image: url("./images/unavailable.png");
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.HexquisiteTile.complete {
+  background-image: url("./images/complete.png");
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.hexcomplete .HexquisiteTile.complete {
+  background-image: url("./images/hoverbg.png");
+  opacity: 0;
+}
+.hexcomplete .HexquisiteTile.complete:hover {
+  opacity: 100;
+}
+.hexcomplete .HexquisiteTile .timer {
+  display: none;
+}
