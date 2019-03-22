@@ -6,6 +6,7 @@ var canvas = JSON.parse(
 
 // Element References
 var canvasDiv = document.getElementById("HexquisiteCanvas");
+var canvasImage = document.getElementById("HexquisiteImage");
 var tilePrototype = document.getElementById("TilePrototype");
 
 // Countdown Div
@@ -16,11 +17,7 @@ countdownDiv.id = "HexCountdown";
 canvasDiv.appendChild(countdownDiv);
 
 // Canvas image
-canvasDiv.style.backgroundImage = "url('http://" + canvas.canvasImage + "')";
-canvasDiv.onclick = function() {
-  window.open("http://" + canvas.canvasImage);
-};
-canvasDiv.style.cursor = "pointer";
+canvasImage.src = `https://${canvas.canvasImage}`;
 
 // Starting values
 var tileWidth = 88;

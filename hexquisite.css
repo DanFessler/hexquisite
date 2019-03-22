@@ -12,19 +12,14 @@
   background-repeat: no-repeat;
   margin: 0 auto;
   line-height: 1.2em;
-  /* z-index: 100; */
-}
-
-#HexquisiteCanvas::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
   background-image: url("./images/canvas.png");
   background-repeat: no-repeat;
+}
+
+#HexquisiteImage {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .HexquisiteTile {
@@ -71,11 +66,7 @@
 }
 
 .unselectable {
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  pointer-events: none;
 }
 
 .hexcomplete .HexquisiteTile.complete {
